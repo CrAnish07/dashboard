@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Dashboard</title>
+    <link rel="stylesheet" href="AgencyDashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Vikas Portal</div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="page1.html">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/combo-chart.png" alt="Overview Icon">
+                        Overview
+                    </a>
+                </li>
+                <li>
+                    <a href="page2.html">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/project.png" alt="Your Projects Icon">
+                        Your Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="page3.html">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/idea.png" alt="Forums Icon">
+                        Forums
+                    </a>
+                </li>
+                <li>
+                    <a href="page4.html">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/conference-call.png" alt="Projects in area Icon">
+                        Projects in Area
+                    </a>
+                </li>
+                <li>
+                    <a href="page5.html">
+                        <img width="35" height="35" src="https://img.icons8.com/sf-regular-filled/48/FFFFFF/shopping-bag-full.png" alt="shopping-bag-full"/>
+                        Raise Ticket
+                    </a>
+                </li>
+                <li>
+                    <a href="page6.html">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/book.png" alt="Articles Icon">
+                        Articles
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="settings">
+            <a href="page7.html">
+                <img src="https://img.icons8.com/ios-filled/24/ffffff/settings.png" alt="Settings Icon">
+                Settings
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <header>
+            <div class="user-info">
+                <span>Agency Employee1</span>
+                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/user-male-circle.png" alt="user-male-circle"/>
+            </div>
+        </header>
+
+        <section class="dashboard">
+            <div class="projects">
+                <div class="section-title">Your Projects</div>
+                <ul>
+                    <li>Church Road (DF block to East metropolitan)</li>
+                    <li>Passage Survey June 2025</li>
+                    <li>Pavement Underpass sector 52 south</li>
+                    <li>Drains in east navi mumbai</li>
+                </ul>
+            </div>
+
+            <!-- <div class="tasks">
+                <div class="section-title">Tasks</div>
+                <ul>
+                    <li class="urgent">Fix Pothole West Road</li>
+                    <li class="new">Analyse Survey Results</li>
+                    <li class="default">Update ticket report</li>
+                </ul>
+            </div> -->
+
+            <div class="tasks">
+                <div class="section-title">Tasks</div>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="task" value="Fix Pothole West Road">
+                            Fix Pothole West Road
+                            <span class="task-status urgent">URGENT</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="task" value="Analyse Survey Results">
+                            Analyse Survey Results
+                            <span class="task-status new">NEW</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="task" value="Update ticket report" checked>
+                            Update ticket report
+                            <span class="task-status default">DEFAULT</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <section class="all-projects">
+            <h2>All Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Details</th>
+                        <th>Agency Representative</th>
+                        <th>Date</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-href="project1.html">
+                        <td>West Andheri Road Project</td>
+                        <td>Tom Cruise</td>
+                        <td>May 26, 2024</td>
+                        <td class="high">High</td>
+                    </tr>
+                    <tr data-href="project2.html">
+                        <td>West Andheri Drainage Project</td>
+                        <td>Matt Damon</td>
+                        <td>June 26, 2024</td>
+                        <td class="low">Low</td>
+                    </tr>
+                    <tr data-href="project3.html">
+                        <td>Navi Mumbai Guardrails and Turning Mirrors</td>
+                        <td>Robert Downey</td>
+                        <td>May 8, 2024</td>
+                        <td class="high">High</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="overview.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const rows = document.querySelectorAll('.all-projects table tbody tr');
+    
+            rows.forEach(row => {
+                row.addEventListener('click', function() {
+                    const href = this.getAttribute('data-href');
+                    if (href) {
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

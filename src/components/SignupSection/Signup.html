@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Signup Form</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- GST No (Initially hidden) -->
+            <div class="form-group" id="gstField" style="display: none;">
+                <label for="gstNo">GST No</label>
+                <input type="text" id="gstNo" name="gstNo">
+            </div>
+
+            <div class="form-group">
+                <label for="role">Select Role</label>
+                <div class="custom-radio-group">
+                    <input type="radio" id="admin" name="role" value="admin" required>
+                    <label for="admin" class="custom-radio-label">Admin</label>
+
+                    <input type="radio" id="employee" name="role" value="employee" required>
+                    <label for="employee" class="custom-radio-label">Employee</label>
+                </div>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="Signup.js"></script>
+</body>
+</html>

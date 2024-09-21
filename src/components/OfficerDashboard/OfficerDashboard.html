@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Dashboard</title>
+    <link rel="stylesheet" href="OfficerDashboard.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Vikas Portal</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="page1.html">Overview</a></li>
+                <li class="active"><a href="page2.html">Tickets</a></li>
+                <li><a href="page3.html">Projects</a></li>
+                <li><a href="page4.html">Forum</a></li>
+                <li><a href="page5.html">Articles</a></li>
+                <li><a href="page6.html">Settings</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <header class="header">
+                <h1>Officer Dashboard</h1>
+                <div class="user-info">
+                    <span>Officer 1</span>
+                </div>
+            </header>
+            
+            <section class="graphical-view">
+                <div class="graph-header">
+                    <h2>Graphical View</h2>
+                    <span>as of 25 September 2024, 09:41 PM</span>
+                </div>
+                <canvas id="lineChart"></canvas>
+            </section>
+
+            <section class="stats">
+                <div class="stat-box">
+                    <h3>Open Projects</h3>
+                    <p>449</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Open Tickets</h3>
+                    <p>426</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Resolved Issues</h3>
+                    <p>1520</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Common Site</h3>
+                    <p>23</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Conflicting Dates</h3>
+                    <p>89</p>
+                </div>
+            </section>
+            
+            <section class="open-tickets">
+                <h2>Open Tickets</h2>
+                <div class="ticket-list">
+                    <div class="ticket">
+                        <p>Survey form from forest dept.</p>
+                        <button>Create Channel</button>
+                    </div>
+                    <div class="ticket">
+                        <p>Unable to add reply</p>
+                        <button>Create Channel</button>
+                    </div>
+                    <div class="ticket">
+                        <p>Incorrect info detected</p>
+                        <button>Create Channel</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('lineChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Mar 24', 'Apr 24', 'May 24', 'Jun 24', 'Jul 24', 'Aug 24', 'Sep 24'],
+                datasets: [{
+                    label: 'Today',
+                    borderColor: '#1E90FF',
+                    data: [10, 25, 38, 30, 40, 50, 38],
+                    fill: false,
+                    tension: 0.4
+                }, {
+                    label: 'Yesterday',
+                    borderColor: '#D3D3D3',
+                    data: [15, 20, 28, 33, 35, 45, 30],
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: {}
+        });
+    </script>
+</body>
+</html>
